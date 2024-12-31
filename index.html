@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <section id="landing-page">
+        <div class="landing">
+            <h1>Welcome to Tic-Tac-Toe</h1>
+            <form id="player-form">
+                <input type="text" id="player1-name" placeholder="Player 1 Name (X)" required>
+                <input type="text" id="player2-name" placeholder="Player 2 Name (O)" required>
+                <div>
+                    <label for="mode">Game Mode:</label>
+                    <select id="mode">
+                        <option value="player-vs-player">Player vs Player</option>
+                        <option value="player-vs-computer">Player vs Computer</option>
+                    </select>
+                </div>
+                <button type="submit">Start Game</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Game Page -->
+    <section id="game-page" class="hidden">
+        <h2 id="game-status">Player X's Turn</h2>
+        <div id="game-board" class="grid"></div>
+        <button id="restart-btn">Restart</button>
+        <audio id="win-sound" src="assets/win.mp3"></audio>
+        <audio id="click-sound" src="assets/click.mp3"></audio>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
